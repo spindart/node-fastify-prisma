@@ -1,0 +1,35 @@
+POST http://localhost:3333/memories
+Content-type: application/json
+
+
+{
+ "content": "Test",
+ "coverUrl": "https://avatars.githubusercontent.com/u/127224931?v=4",
+ "isPublic": 1
+}
+
+
+###
+
+GET http://localhost:3333/memories
+
+###
+
+GET http://localhost:3333/memories/09dd07b9-ea60-491b-80ae-c5de3fb425b1
+
+
+###
+
+PUT  http://localhost:3333/memories/e95148ec-57a5-4e26-8888-963afd5d6acb
+Content-type: application/json
+
+
+{
+ "content": "Test 2",
+ "coverUrl": "https://avatars.githubusercontent.com/u/127224931?v=4",
+ "isPublic": 1
+}
+
+###
+
+DELETE http://localhost:3333/memories/e95148ec-57a5-4e26-8888-963afd5d6acb
