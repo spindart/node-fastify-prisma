@@ -2,6 +2,7 @@ import { FastifyInstance } from 'fastify'
 import { prisma } from '../lib/prisma'
 import { z } from 'zod'
 export async function memoriesRoutes(app: FastifyInstance) {
+  
   app.get('/memories', async () => {
     const memories = await prisma.memory.findMany({
       orderBy: {
@@ -30,6 +31,7 @@ export async function memoriesRoutes(app: FastifyInstance) {
     })
     return memory
   })
+
   app.post('/memories', async (request) => {
     const bodySchema = z.object({
       content: z.string(),
